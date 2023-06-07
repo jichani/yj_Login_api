@@ -40,7 +40,8 @@
                     <button id="login">로그인</button>
                     <div class="social_Login">
                         <a href="javascript:kakaoLogin();"><img src="./img/kakao_login.png" width="200px" /></a>
-                        <a href="javascript:kakaoLogin();"><img src="./img/kakao_login.png" width="200px" /></a>
+                        <!-- 네이버 로그인 버튼 노출 영역 -->
+                        <div id="naver_id_login"></div>
                     </div>
                 </form>
             </div>
@@ -67,6 +68,17 @@
                 }
             });
         }
+    </script>
+
+    <!-- //네이버 로그인 버튼 노출 영역 -->
+    <script type="text/javascript">
+        var naver_id_login = new naver_id_login("B0twsA2Tqy3r_6xfAiPY", "https://jichani.github.io/yj_Login_api/callback.html");
+        var state = naver_id_login.getUniqState();
+        naver_id_login.setButton("white", 2, 40);
+        naver_id_login.setDomain("https://jichani.github.io/yj_Login_api/login.html");
+        naver_id_login.setState(state);
+        naver_id_login.setPopup();
+        naver_id_login.init_naver_id_login();
     </script>
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
